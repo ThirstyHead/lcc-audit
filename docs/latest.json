@@ -1,8 +1,8 @@
 {
-  "siteGenerated": "2026-08-25T06:47:48.078Z",
+  "siteGenerated": "2026-08-25T22:29:29.793Z",
   "sourceRepo": "https://github.com/ThirstyHead/audit-lamarcc.edu",
   "report": {
-    "generated": "2026-08-25T06:47:47.138Z",
+    "generated": "2026-08-25T22:29:28.647Z",
     "tags": [
       "wcag2a",
       "wcag2aa",
@@ -328,10 +328,10 @@
             "nodes": 5,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-84-tab-2\"]",
-              "li[aria-controls=\"tabs-84-tab-3\"]",
-              "li[aria-controls=\"tabs-84-tab-4\"]",
-              "li[aria-controls=\"tabs-84-tab-5\"]"
+              "li[aria-controls=\"tabs-62-tab-2\"]",
+              "li[aria-controls=\"tabs-62-tab-3\"]",
+              "li[aria-controls=\"tabs-62-tab-4\"]",
+              "li[aria-controls=\"tabs-62-tab-5\"]"
             ]
           }
         ],
@@ -634,8 +634,9 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 2,
+            "nodes": 3,
             "firstTargets": [
+              "iframe[width=\"640\"] .AeBiU-vQzf8d[jsname=\"V67aGc\"][aria-hidden=\"true\"]",
               ".last",
               ".last > strong"
             ]
@@ -764,8 +765,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-46-tab-2\"]",
-              "li[aria-controls=\"tabs-46-tab-3\"]"
+              "li[aria-controls=\"tabs-10-tab-2\"]",
+              "li[aria-controls=\"tabs-10-tab-3\"]"
             ]
           }
         ],
@@ -937,7 +938,7 @@
             "nodes": 2,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-3-tab-2\"]"
+              "li[aria-controls=\"tabs-69-tab-2\"]"
             ]
           }
         ],
@@ -1002,9 +1003,9 @@
             "nodes": 4,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-83-tab-2\"]",
-              "li[aria-controls=\"tabs-83-tab-3\"]",
-              "li[aria-controls=\"tabs-83-tab-4\"]"
+              "li[aria-controls=\"tabs-72-tab-2\"]",
+              "li[aria-controls=\"tabs-72-tab-3\"]",
+              "li[aria-controls=\"tabs-72-tab-4\"]"
             ]
           }
         ],
@@ -3128,8 +3129,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-3-tab-2\"]",
-              "li[aria-controls=\"tabs-3-tab-3\"]"
+              "li[aria-controls=\"tabs-66-tab-2\"]",
+              "li[aria-controls=\"tabs-66-tab-3\"]"
             ]
           }
         ],
@@ -3369,10 +3370,10 @@
             "nodes": 7,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-14-tab-2\"]",
-              "li[aria-controls=\"tabs-14-tab-3\"]",
-              "li[aria-controls=\"tabs-14-tab-4\"]",
-              "li[aria-controls=\"tabs-14-tab-5\"]"
+              "li[aria-controls=\"tabs-8-tab-2\"]",
+              "li[aria-controls=\"tabs-8-tab-3\"]",
+              "li[aria-controls=\"tabs-8-tab-4\"]",
+              "li[aria-controls=\"tabs-8-tab-5\"]"
             ]
           }
         ],
@@ -4898,7 +4899,7 @@
             ],
             "nodes": 1,
             "firstTargets": [
-              "a:nth-child(5) > span"
+              "a[href=\"https://lamarcc.edu/59043-2/\"] > span"
             ]
           }
         ],
@@ -5840,9 +5841,9 @@
             ],
             "nodes": 7,
             "firstTargets": [
-              "li[aria-controls=\"tabs-47-tab-1\"]",
-              "li[aria-controls=\"tabs-47-tab-2\"]",
-              "li[aria-controls=\"tabs-47-tab-3\"]",
+              "li[aria-controls=\"tabs-74-tab-1\"]",
+              "li[aria-controls=\"tabs-74-tab-2\"]",
+              "li[aria-controls=\"tabs-74-tab-3\"]",
               "li[aria-controls=\"tabs-tabber2-tab-1\"]",
               "li[aria-controls=\"tabs-tabber2-tab-2\"]"
             ]
@@ -6100,11 +6101,11 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 14,
+            "nodes": 13,
             "firstTargets": [
-              ".slide-59718[data-date=\"2026-06-09 08:33:06\"][data-filename=\"Untitled-design-24.png\"]:nth-child(2) > .caption-wrap > .caption > div",
               ".flex-active-slide > .caption-wrap > .caption > div",
-              ".threecol-one:nth-child(19) > h4"
+              ".threecol-one:nth-child(19) > h4",
+              "a[href$=\"lamarcc.erezlife.com/\"]"
             ]
           }
         ]
@@ -6790,8 +6791,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-89-tab-2\"]",
-              "li[aria-controls=\"tabs-89-tab-3\"]"
+              "li[aria-controls=\"tabs-73-tab-2\"]",
+              "li[aria-controls=\"tabs-73-tab-3\"]"
             ]
           }
         ],
@@ -7135,8 +7136,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-54-tab-2\"]",
-              "li[aria-controls=\"tabs-54-tab-3\"]"
+              "li[aria-controls=\"tabs-73-tab-2\"]",
+              "li[aria-controls=\"tabs-73-tab-3\"]"
             ]
           }
         ],
