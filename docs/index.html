@@ -1,0 +1,1574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WCAG 2.1 AA Audit — Lamar Community College (https://lamarcc.edu)</title>
+<meta name="description" content="Automated weekly WCAG 2.1 AA accessibility audit results for https://lamarcc.edu, produced with axe-core.">
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 2rem 1.25rem 4rem; max-width: 940px;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #212f3c; background: #fdfdfc;
+  }
+  header h1 { font-size: 1.7rem; margin: 0 0 .25rem; }
+  header .sub { color: #566573; margin: 0 0 1rem; }
+  .meta { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; color: #566573; font-size: .92rem; border-bottom: 1px solid #e3e7ea; padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .75rem; margin-bottom: 1rem; }
+  .card { background: #fff; border: 1px solid #e3e7ea; border-radius: 8px; padding: .9rem 1rem; }
+  .card .num { display: block; font-size: 1.9rem; font-weight: 700; line-height: 1.2; }
+  .card .lbl { color: #566573; font-size: .85rem; }
+  .sevcard { background: #fff; border: 1px solid #e3e7ea; border-radius: 8px; padding: .6rem .8rem; display: flex; align-items: baseline; gap: .5rem; }
+  .sevcard .num { font-size: 1.4rem; font-weight: 700; }
+  .sevcard .lbl { color: #566573; font-size: .82rem; }
+  .severities { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: .5rem; margin-bottom: 1.5rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .75rem; }
+  .spark { width: 100%; max-width: 680px; height: auto; background: #fff; border: 1px solid #e3e7ea; border-radius: 8px; }
+  .axis { font-size: 11px; fill: #7b8a8b; }
+  .delta { font-size: .9rem; font-weight: 600; }
+  .delta.up { color: #b03a2e; } .delta.down { color: #1e8449; }
+  .delta.flat, .delta.first { color: #7b8a8b; font-weight: 400; }
+  .page { background: #fff; border: 1px solid #e3e7ea; border-radius: 8px; padding: 1rem 1.25rem 1.25rem; margin-bottom: 1rem; }
+  .page.failed { border-color: #f0b27a; background: #fef9f3; }
+  .page h3 { margin: 0 0 .25rem; font-size: 1.05rem; word-break: break-all; }
+  .page h3 .title { font-weight: 400; color: #7b8a8b; font-size: .9rem; }
+  .page h4 { margin: 1rem 0 .5rem; font-size: .95rem; }
+  .count { color: #7b8a8b; font-weight: 400; font-size: .85rem; }
+  .total { margin: 0 0 .5rem; color: #566573; }
+  .clean { color: #1e8449; font-weight: 600; }
+  .warn { color: #b9770e; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid #eef1f2; vertical-align: top; }
+  th { color: #566573; font-size: .8rem; text-transform: uppercase; letter-spacing: .03em; }
+  .targets { color: #7b8a8b; font-size: .82rem; word-break: break-all; max-width: 260px; }
+  code { background: #f4f6f7; padding: .1rem .35rem; border-radius: 4px; font-size: .85em; }
+  ul.inc { margin: .25rem 0 0; padding-left: 1.2rem; }
+  .note { color: #566573; font-size: .9rem; margin: .25rem 0 .75rem; }
+  table.pages { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  table.pages thead th {
+    position: sticky; top: 0; background: #fdfdfc; z-index: 1;
+    border-bottom: 2px solid #e3e7ea;
+  }
+  table.pages th.n, table.pages td.n { text-align: right; white-space: nowrap; }
+  table.pages td.n.bad { color: #b03a2e; font-weight: 700; }
+  table.pages td.pg { max-width: 0; }
+  table.pages td.pg a { word-break: break-all; }
+  table.pages .pwurl { display: block; color: #7b8a8b; font-size: .8rem; margin-top: .1rem; word-break: break-all; }
+  table.pages td.pg .err { word-break: break-all; }
+  table.pages td.links { white-space: nowrap; text-align: right; }
+  table.pages a.pgrep {
+    color: #2e86c1; text-decoration: none; font-weight: 600;
+    border: 1px solid #cfe6f5; background: #f4fafd; padding: .15rem .5rem; border-radius: 6px;
+  }
+  table.pages a.pgrep:hover { background: #e8f4fb; }
+  table.pages tr.bad td.pg a { color: #b03a2e; }
+  footer { margin-top: 2.5rem; border-top: 1px solid #e3e7ea; padding-top: 1rem; font-size: .85rem; color: #566573; }
+  footer a { color: #2e86c1; }
+  .datamenu { display: flex; flex-wrap: wrap; gap: 1rem; margin: .5rem 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>WCAG 2.1 AA Audit — Lamar Community College</h1>
+  <p class="sub"><a href="https://lamarcc.edu">https://lamarcc.edu</a></p>
+</header>
+
+<div class="meta">
+  <span>Last audited: <strong>August 25, 2026</strong> (UTC)</span>
+  <span>Published runs: 1</span>
+  <span>Tooling: <a href="https://github.com/ThirstyHead/audit-lamarcc.edu">axe-core + Playwright</a>, run weekly via GitHub Actions</span>
+  <span><span class="delta first">first published run</span></span>
+</div>
+
+<h2>Latest results</h2>
+<div class="cards">
+  <div class="card"><span class="num">329</span><span class="lbl">Node-level violations</span></div>
+  <div class="card"><span class="num">239</span><span class="lbl">Pages audited</span></div>
+  <div class="card"><span class="num">1446</span><span class="lbl">Need manual review</span></div>
+</div>
+<div class="severities">
+      <div class="sevcard" style="border-top:4px solid #b03a2e">
+        <span class="num">72</span>
+        <span class="lbl">Critical</span>
+      </div>
+      <div class="sevcard" style="border-top:4px solid #ca6f1e">
+        <span class="num">257</span>
+        <span class="lbl">Serious</span>
+      </div>
+      <div class="sevcard" style="border-top:4px solid #b7950b">
+        <span class="num">0</span>
+        <span class="lbl">Moderate</span>
+      </div>
+      <div class="sevcard" style="border-top:4px solid #707b7c">
+        <span class="num">0</span>
+        <span class="lbl">Minor</span>
+      </div></div>
+
+<h2>Trend</h2>
+<p class="count">The trend chart appears once at least two runs have been published.</p>
+
+<h2>Pages</h2>
+<p class="note">Every page audited in this run. “Audit report” opens that page's full axe report — violations, needs-review, and passes, with node-level detail.</p>
+
+<table class="pages">
+  <thead><tr><th class="pg">Page</th><th class="n">Violations</th><th class="n">Needs review</th><th>Report</th></tr></thead>
+  <tbody>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about" rel="noopener">About – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc" rel="noopener">About LCC – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc</span></td>
+      <td class="n bad">2</td>
+      <td class="n">7</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/accreditation" rel="noopener">Accreditation – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/accreditation</span></td>
+      <td class="n bad">3</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-accreditation.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/alumni-relations" rel="noopener">Alumni Relations – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/alumni-relations</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-alumni-relations.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/alumni-relations/alumni-registry" rel="noopener">Alumni Registry – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/alumni-relations/alumni-registry</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-alumni-relations-alumni-registry.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/commitment-to-diversity" rel="noopener">Commitment to Diversity – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/commitment-to-diversity</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-commitment-to-diversity.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/communityinvolvement" rel="noopener">Page not found – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/communityinvolvement</span></td>
+      <td class="n">0</td>
+      <td class="n">3</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-communityinvolvement.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/contact-lcc" rel="noopener">Contact LCC – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/contact-lcc</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-contact-lcc.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/coronavirus-information" rel="noopener">COVID-19 Information – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/coronavirus-information</span></td>
+      <td class="n bad">6</td>
+      <td class="n">15</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-coronavirus-information.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/disclaimers-legal-notices" rel="noopener">Disclaimers &amp; Legal Notices – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/disclaimers-legal-notices</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-disclaimers-legal-notices.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/economic-impact" rel="noopener">Economic Impact – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/economic-impact</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-economic-impact.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/employment-opportunities" rel="noopener">Employment Opportunities – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/employment-opportunities</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-employment-opportunities.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/facts-figures" rel="noopener">Facts &amp; Figures – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/facts-figures</span></td>
+      <td class="n">0</td>
+      <td class="n">23</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-facts-figures.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/innovate" rel="noopener">LCC Innovate &amp; Make Space – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/innovate</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-innovate.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/innovate-2" rel="noopener">LCC Innovate &amp; Make Space – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/innovate-2</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-innovate-2.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/innovate-2/about-the-ims" rel="noopener">About the I&amp;MS – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/innovate-2/about-the-ims</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-innovate-2-about-the-ims.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/innovate-2/hours-course-schedule" rel="noopener">Hours &amp; Course Schedule – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/innovate-2/hours-course-schedule</span></td>
+      <td class="n bad">2</td>
+      <td class="n">10</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-innovate-2-hours-course-schedule.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/innovate-2/offerings-rates" rel="noopener">Offerings &amp; Rates – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/innovate-2/offerings-rates</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-innovate-2-offerings-rates.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/innovate/meet-the-makers" rel="noopener">Meet the Makers – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/innovate/meet-the-makers</span></td>
+      <td class="n bad">1</td>
+      <td class="n">25</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-innovate-meet-the-makers.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/invest-in-lcc" rel="noopener">LCC Foundation – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/invest-in-lcc</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-invest-in-lcc.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/invest-in-lcc/invest-community-college" rel="noopener">INVEST IN YOUR COMMUNITY College! – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/invest-in-lcc/invest-community-college</span></td>
+      <td class="n bad">4</td>
+      <td class="n">8</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-invest-in-lcc-invest-community-college.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/maps" rel="noopener">Maps – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/maps</span></td>
+      <td class="n bad">3</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-maps.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/message-from-the-president" rel="noopener">Message from the President – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/message-from-the-president</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-message-from-the-president.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/presidents-community-circle" rel="noopener">President’s Community Circle – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/presidents-community-circle</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-presidents-community-circle.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/about-lcc/staff-directory" rel="noopener">Directory – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/about-lcc/staff-directory</span></td>
+      <td class="n bad">3</td>
+      <td class="n">7</td>
+      <td class="links"><a class="pgrep" href="pages/about-lcc-staff-directory.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics" rel="noopener">Academics – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics-2" rel="noopener">Academics – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics-2</span></td>
+      <td class="n bad">4</td>
+      <td class="n">8</td>
+      <td class="links"><a class="pgrep" href="pages/academics-2.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/academic-advising" rel="noopener">Academic Advising – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/academic-advising</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-academic-advising.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/academic-calendar" rel="noopener">Academic Calendar – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/academic-calendar</span></td>
+      <td class="n bad">11</td>
+      <td class="n">91</td>
+      <td class="links"><a class="pgrep" href="pages/academics-academic-calendar.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/adult-career-educational-center" rel="noopener">Adult Career Educational Center – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/adult-career-educational-center</span></td>
+      <td class="n bad">5</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-adult-career-educational-center.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/alternative-credit-project" rel="noopener">Alternative Credit Project™ – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/alternative-credit-project</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-alternative-credit-project.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/bridgetobachelors" rel="noopener">Bridge To Bachelors Degree Program – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/bridgetobachelors</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-bridgetobachelors.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/bridgetobachelors-2" rel="noopener">Bridge To Bachelors Degree Program – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/bridgetobachelors-2</span></td>
+      <td class="n bad">9</td>
+      <td class="n">5</td>
+      <td class="links"><a class="pgrep" href="pages/academics-bridgetobachelors-2.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/community-education" rel="noopener">Community Education – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/community-education</span></td>
+      <td class="n">0</td>
+      <td class="n">14</td>
+      <td class="links"><a class="pgrep" href="pages/academics-community-education.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/community-education/career-training" rel="noopener">Career Training – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/community-education/career-training</span></td>
+      <td class="n">0</td>
+      <td class="n">14</td>
+      <td class="links"><a class="pgrep" href="pages/academics-community-education-career-training.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/community-education/personal-enrichment" rel="noopener">Personal Enrichment – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/community-education/personal-enrichment</span></td>
+      <td class="n">0</td>
+      <td class="n">45</td>
+      <td class="links"><a class="pgrep" href="pages/academics-community-education-personal-enrichment.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/community-education/professional-development" rel="noopener">Professional Development – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/community-education/professional-development</span></td>
+      <td class="n">0</td>
+      <td class="n">60</td>
+      <td class="links"><a class="pgrep" href="pages/academics-community-education-professional-development.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/concurrent-enrollment" rel="noopener">Concurrent Enrollment – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/concurrent-enrollment</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-concurrent-enrollment.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/concurrent-enrollment/ascent" rel="noopener">ASCENT – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/concurrent-enrollment/ascent</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-concurrent-enrollment-ascent.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/concurrent-enrollment/ce-resources" rel="noopener">CE Resources – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/concurrent-enrollment/ce-resources</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-concurrent-enrollment-ce-resources.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/concurrent-enrollment/getting-started-with-concurrent-enrollment" rel="noopener">Getting Started with Concurrent Enrollment – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/concurrent-enrollment/getting-started-with-concurrent-enrollment</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-concurrent-enrollment-getting-started-with-concurrent-enrollment.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/cultivate-at-lcc" rel="noopener">Cultivate at LCC – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/cultivate-at-lcc</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-cultivate-at-lcc.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/degrees-certificates" rel="noopener">Degrees &amp; Certificates – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/degrees-certificates</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-degrees-certificates.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/degrees-programs" rel="noopener">Degrees &amp; Certificates – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/degrees-programs</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-degrees-programs.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/degrees-programs-2" rel="noopener">Degrees &amp; Certificates – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/degrees-programs-2</span></td>
+      <td class="n">0</td>
+      <td class="n">1</td>
+      <td class="links"><a class="pgrep" href="pages/academics-degrees-programs-2.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/degrees-programs/certificate-programs" rel="noopener">Degrees &amp; Certificates – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/degrees-programs/certificate-programs</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-degrees-programs-certificate-programs.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/distancelearningsites" rel="noopener">Distance Learning Sites – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/distancelearningsites</span></td>
+      <td class="n bad">1</td>
+      <td class="n">16</td>
+      <td class="links"><a class="pgrep" href="pages/academics-distancelearningsites.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/fields-of-study" rel="noopener">Degrees &amp; Certificates – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/fields-of-study</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-fields-of-study.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/graduation" rel="noopener">Graduation – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/graduation</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-graduation.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/htm-student-questionnaire" rel="noopener">Horse Student Questionnaire – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/htm-student-questionnaire</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-htm-student-questionnaire.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs" rel="noopener">Academic Programs – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/agriculture" rel="noopener">Agriculture – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/agriculture</span></td>
+      <td class="n bad">6</td>
+      <td class="n">3</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-agriculture.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/allied-health" rel="noopener">Allied Health – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/allied-health</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-allied-health.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/behavioral-health" rel="noopener">Behavioral Health – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/behavioral-health</span></td>
+      <td class="n">0</td>
+      <td class="n">46</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-behavioral-health.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/business" rel="noopener">Business – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/business</span></td>
+      <td class="n">0</td>
+      <td class="n">22</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-business.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/construction-trades" rel="noopener">Construction Trades – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/construction-trades</span></td>
+      <td class="n">0</td>
+      <td class="n">30</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-construction-trades.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/cosmetology-barber" rel="noopener">Cosmetology &amp; Barber – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/cosmetology-barber</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-cosmetology-barber.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/cosmetology-barber-2" rel="noopener">Cosmetology &amp; Barber – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/cosmetology-barber-2</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-cosmetology-barber-2.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/cosmetology-barber-2/lcc-salon" rel="noopener">LCC Salon – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/cosmetology-barber-2/lcc-salon</span></td>
+      <td class="n">0</td>
+      <td class="n">10</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-cosmetology-barber-2-lcc-salon.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/criminal-justice" rel="noopener">Criminal Justice – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/criminal-justice</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-criminal-justice.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/early-childhood-education" rel="noopener">Early Childhood Education – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/early-childhood-education</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-early-childhood-education.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/apply-to-htm" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/apply-to-htm</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-apply-to-htm.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/equine-club" rel="noopener">Student Clubs and Organizations – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/equine-club</span></td>
+      <td class="n bad">6</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-equine-club.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/horse-program-faqs" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/horse-program-faqs</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-horse-program-faqs.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/horse-program-scholarships" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/horse-program-scholarships</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-horse-program-scholarships.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/htm-facilities" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/htm-facilities</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-htm-facilities.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/htm-faculty" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/htm-faculty</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-htm-faculty.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/htm-tack-list" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/htm-tack-list</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-htm-tack-list.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/htm-testimonials" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/htm-testimonials</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-htm-testimonials.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/horse-training-management/lamar-legacy-horse-sale" rel="noopener">Lamar Legacy Horse Sale – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/horse-training-management/lamar-legacy-horse-sale</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-horse-training-management-lamar-legacy-horse-sale.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/nursing" rel="noopener">Nursing – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/nursing</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-nursing.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/nursing/nlnac-accreditation" rel="noopener">Accreditation Information – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/nursing/nlnac-accreditation</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-nursing-nlnac-accreditation.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/nursing/nursing-admission" rel="noopener">Admission to the Nursing Program – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/nursing/nursing-admission</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-nursing-nursing-admission.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/nursing/nursing-faculty" rel="noopener">Nursing Faculty – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/nursing/nursing-faculty</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-nursing-nursing-faculty.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/nursing/nursing-photo-gallery" rel="noopener">Nursing Photo Gallery – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/nursing/nursing-photo-gallery</span></td>
+      <td class="n bad">5</td>
+      <td class="n">4</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-nursing-nursing-photo-gallery.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/nursing/nursing-program-description" rel="noopener">Nursing Program Description – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/nursing/nursing-program-description</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-nursing-nursing-program-description.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/nursing/nursing-programs-application" rel="noopener">Apply to the Nursing Program – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/nursing/nursing-programs-application</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-nursing-nursing-programs-application.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/precision-agriculture" rel="noopener">Agriculture – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/precision-agriculture</span></td>
+      <td class="n bad">6</td>
+      <td class="n">3</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-precision-agriculture.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/renewable-energy-technologies" rel="noopener">Renewable Energy Technologies – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/renewable-energy-technologies</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-renewable-energy-technologies.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/sports-exercise-science" rel="noopener">Sports and Exercise Science – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/sports-exercise-science</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-sports-exercise-science.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/occupational-programs/welding" rel="noopener">Welding – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/occupational-programs/welding</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-occupational-programs-welding.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/online" rel="noopener">Online Learning – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/online</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-online.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/programs" rel="noopener">Academic Programs – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/programs</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-programs.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/schedule" rel="noopener">Course Schedules &amp; Final Exam Schedules – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/schedule</span></td>
+      <td class="n">0</td>
+      <td class="n">7</td>
+      <td class="links"><a class="pgrep" href="pages/academics-schedule.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/tprep" rel="noopener">The Partnership for Rural Educator Preparation – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/tprep</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-tprep.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/academics/transcript-request" rel="noopener">Transcript Request / Degree Verification – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/transcript-request</span></td>
+      <td class="n bad">3</td>
+      <td class="n">19</td>
+      <td class="links"><a class="pgrep" href="pages/academics-transcript-request.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/academics/transfer-options" rel="noopener">Transfer Options – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/academics/transfer-options</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/academics-transfer-options.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/accessibility-statement" rel="noopener">Accessibility Statement – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/accessibility-statement</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/accessibility-statement.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/adjunct-faculty" rel="noopener">Instructor Resources – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/adjunct-faculty</span></td>
+      <td class="n">0</td>
+      <td class="n">54</td>
+      <td class="links"><a class="pgrep" href="pages/adjunct-faculty.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission" rel="noopener">Admission – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/admission/fall-2020-3" rel="noopener">Fall 2020 – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/fall-2020-3</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-fall-2020-3.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission/international-students" rel="noopener">International Students – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/international-students</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-international-students.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission/international-students/international-student-admissions" rel="noopener">International Student Admissions – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/international-students/international-student-admissions</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-international-students-international-student-admissions.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/admission/military-students" rel="noopener">Military Students – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/military-students</span></td>
+      <td class="n bad">8</td>
+      <td class="n">14</td>
+      <td class="links"><a class="pgrep" href="pages/admission-military-students.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission/new-student-orientation" rel="noopener">New Student Orientation – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/new-student-orientation</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-new-student-orientation.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission/placement-testing" rel="noopener">Placement Testing – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/placement-testing</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-placement-testing.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission/register-for-classes" rel="noopener">Register for Classes – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/register-for-classes</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-register-for-classes.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission/request-more-information" rel="noopener">Request More Information – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/request-more-information</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-request-more-information.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission/transfer-to-lcc" rel="noopener">Transfer to LCC – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/transfer-to-lcc</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-transfer-to-lcc.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/admission/visit-campus" rel="noopener">Visit Campus – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/admission/visit-campus</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/admission-visit-campus.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/art-craft-and-food-fair" rel="noopener">Art Craft and Food Fair – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/art-craft-and-food-fair</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/art-craft-and-food-fair.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/athletics" rel="noopener">Human Verification</a> <span class="pwurl">https://lamarcc.edu/athletics</span></td>
+      <td class="n">0</td>
+      <td class="n">18</td>
+      <td class="links"><a class="pgrep" href="pages/athletics.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/athletics/ranch-horse-team" rel="noopener">Ranch Horse Team – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/athletics/ranch-horse-team</span></td>
+      <td class="n bad">25</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/athletics-ranch-horse-team.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/athletics/rodeo-team" rel="noopener">Rodeo Team – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/athletics/rodeo-team</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/athletics-rodeo-team.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/athletics/runnin-lopes-booster-club" rel="noopener">Runnin’ Lopes Booster Club – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/athletics/runnin-lopes-booster-club</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/athletics-runnin-lopes-booster-club.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/blog" rel="noopener">Blog – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/blog</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/blog.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/calendar" rel="noopener">Calendar – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/calendar</span></td>
+      <td class="n bad">12</td>
+      <td class="n">93</td>
+      <td class="links"><a class="pgrep" href="pages/calendar.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/campus-visit-form-test" rel="noopener">Campus Visit Form Test – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/campus-visit-form-test</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/campus-visit-form-test.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/cart" rel="noopener">Cart – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/cart</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/cart.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/catalog-2" rel="noopener">catalog – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/catalog-2</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/catalog-2.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/checkout" rel="noopener">Checkout – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/checkout</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/checkout.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/coming-soon-map-center-student-union-space" rel="noopener">Coming soon, MAP Center &amp; Student Union Space – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/coming-soon-map-center-student-union-space</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/coming-soon-map-center-student-union-space.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/contact" rel="noopener">Contact – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/contact</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/contact.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/contact-lopescares" rel="noopener">Contact LopesCares – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/contact-lopescares</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/contact-lopescares.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/coperr-program" rel="noopener">Lamar Construction Trades- Workforce training, economic development – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/coperr-program</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/coperr-program.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/covid" rel="noopener">COVID – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/covid</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/covid.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/early-childhood-education" rel="noopener">Early Childhood Education – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/early-childhood-education</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/early-childhood-education.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/encampment" rel="noopener">Frontier History Encampment – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/encampment</span></td>
+      <td class="n bad">9</td>
+      <td class="n">22</td>
+      <td class="links"><a class="pgrep" href="pages/encampment.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/events-template" rel="noopener">Events template – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/events-template</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/events-template.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/fall2020" rel="noopener">Enroll Now for Fall 2020! – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/fall2020</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/fall2020.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/fonts-and-sizing-test-page" rel="noopener">Fonts and Sizing Test Page – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/fonts-and-sizing-test-page</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/fonts-and-sizing-test-page.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/food-pantry-food-access-program" rel="noopener">Food Pantry/Food Access Program – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/food-pantry-food-access-program</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/food-pantry-food-access-program.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/full-width-page" rel="noopener">Full-width Page – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/full-width-page</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/full-width-page.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/gallery" rel="noopener">Gallery – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/gallery</span></td>
+      <td class="n bad">10</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/gallery.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/girls-in-the-middle-registration" rel="noopener">Girls in the Middle Registration – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/girls-in-the-middle-registration</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/girls-in-the-middle-registration.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/graduation-2021" rel="noopener">Graduation 2021 – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/graduation-2021</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/graduation-2021.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/graduation-ceremony-awards-17" rel="noopener">Graduation Ceremony Awards ’17 – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/graduation-ceremony-awards-17</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/graduation-ceremony-awards-17.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/graduation2020" rel="noopener">Graduation 2020 – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/graduation2020</span></td>
+      <td class="n bad">2</td>
+      <td class="n">4</td>
+      <td class="links"><a class="pgrep" href="pages/graduation2020.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/homepage" rel="noopener">Homepage – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/homepage</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/homepage.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/homepage-2" rel="noopener">Homepage – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/homepage-2</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/homepage-2.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/homepage-2-2" rel="noopener">Homepage 2 – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/homepage-2-2</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/homepage-2-2.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/homepage-3" rel="noopener">Homepage – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/homepage-3</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/homepage-3.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/internship-program" rel="noopener">Horse Training &amp; Management (HTM) and Equine Business Management (EBM) – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/internship-program</span></td>
+      <td class="n bad">3</td>
+      <td class="n">17</td>
+      <td class="links"><a class="pgrep" href="pages/internship-program.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/jedcampus" rel="noopener">JED Campus – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/jedcampus</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/jedcampus.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/lecture-hall-grand-reopening" rel="noopener">Lecture Halls Grand Reopening – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/lecture-hall-grand-reopening</span></td>
+      <td class="n">0</td>
+      <td class="n">12</td>
+      <td class="links"><a class="pgrep" href="pages/lecture-hall-grand-reopening.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/library-left-wing-now-reopened" rel="noopener">Library Left Wing Now Reopened – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/library-left-wing-now-reopened</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/library-left-wing-now-reopened.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/location" rel="noopener">Location – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/location</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/location.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/lopes-cares" rel="noopener">Lopes Cares – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/lopes-cares</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/lopes-cares.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/lopes-day-2022" rel="noopener">Lopes Day 2022 – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/lopes-day-2022</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/lopes-day-2022.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/lopey" rel="noopener">lopey – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/lopey</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/lopey.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/more" rel="noopener">Get MORE at Lamar Community College – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/more</span></td>
+      <td class="n">0</td>
+      <td class="n">31</td>
+      <td class="links"><a class="pgrep" href="pages/more.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/my-account" rel="noopener">My account – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/my-account</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/my-account.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/news" rel="noopener">News – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/news</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/news.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/news_alt" rel="noopener">News Alt – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/news_alt</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/news-alt.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/news_announcements" rel="noopener">News &amp; Announcements – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/news_announcements</span></td>
+      <td class="n bad">1</td>
+      <td class="n">13</td>
+      <td class="links"><a class="pgrep" href="pages/news-announcements.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/offerings-rates" rel="noopener">Offerings &amp; Rates – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/offerings-rates</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/offerings-rates.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/oldhome-pre-redesign" rel="noopener">oldHome Pre Redesign – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/oldhome-pre-redesign</span></td>
+      <td class="n bad">3</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/oldhome-pre-redesign.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/online-admissions-are-now-open" rel="noopener">Online Admissions Are Now Open – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/online-admissions-are-now-open</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/online-admissions-are-now-open.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/online-support" rel="noopener">Online Education Resources and Support – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/online-support</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/online-support.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/organizer-template" rel="noopener">Organizer template – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/organizer-template</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/organizer-template.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/page-custom-sidebars" rel="noopener">Page with Custom Sidebars – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/page-custom-sidebars</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/page-custom-sidebars.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/page-showing-sub-pages" rel="noopener">Page Showing Sub-Pages – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/page-showing-sub-pages</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/page-showing-sub-pages.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/page-showing-sub-pages/debra-d-jones-school-principal" rel="noopener">Debra D. Jones, School Principal – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/page-showing-sub-pages/debra-d-jones-school-principal</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/page-showing-sub-pages-debra-d-jones-school-principal.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/page-showing-sub-pages/james-d-phipps-mathematics-teacher" rel="noopener">James D. Phipps, Mathematics Teacher – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/page-showing-sub-pages/james-d-phipps-mathematics-teacher</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/page-showing-sub-pages-james-d-phipps-mathematics-teacher.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/page-showing-sub-pages/melanie-hunt-school-nurse" rel="noopener">Melanie A. Hunt, School Nurse – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/page-showing-sub-pages/melanie-hunt-school-nurse</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/page-showing-sub-pages-melanie-hunt-school-nurse.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/page-showing-sub-pages/wendy-t-morton-psychologist" rel="noopener">Wendy T. Morton, Psychologist – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/page-showing-sub-pages/wendy-t-morton-psychologist</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/page-showing-sub-pages-wendy-t-morton-psychologist.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/page-sidebar-right" rel="noopener">Page with Sidebar on the Right – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/page-sidebar-right</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/page-sidebar-right.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/page-with-sidebar-on-the-left" rel="noopener">Page with Sidebar on the Left – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/page-with-sidebar-on-the-left</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/page-with-sidebar-on-the-left.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/parent-information" rel="noopener">Parent Information – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/parent-information</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/parent-information.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college" rel="noopener">Paying For College – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/career-advance-colorado" rel="noopener">Career Advance Colorado – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/career-advance-colorado</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-career-advance-colorado.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/cashier" rel="noopener">Cashier – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/cashier</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-cashier.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/financial-aid" rel="noopener">Financial Aid – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/financial-aid</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-financial-aid.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/financial-aid/satisfactory-academic-progress-appeal-process" rel="noopener">Satisfactory Academic Progress Appeal Process – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/financial-aid/satisfactory-academic-progress-appeal-process</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-financial-aid-satisfactory-academic-progress-appeal-process.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/net-price-calculator" rel="noopener">Net Price Calculator – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/net-price-calculator</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-net-price-calculator.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/refunds" rel="noopener">Refunds – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/refunds</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-refunds.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/scholarships" rel="noopener">Scholarships – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/scholarships</span></td>
+      <td class="n bad">4</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-scholarships.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/scholarships/scholarship-application-form" rel="noopener">Scholarship Application Form – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/scholarships/scholarship-application-form</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-scholarships-scholarship-application-form.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/student-employment" rel="noopener">Student Employment/Work-Study – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/student-employment</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-student-employment.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/student-employment/work-study-positions" rel="noopener">Work-Study Positions – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/student-employment/work-study-positions</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-student-employment-work-study-positions.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/paying-for-college/tuition-fees" rel="noopener">Tuition and Fees – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/paying-for-college/tuition-fees</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/paying-for-college-tuition-fees.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/presidentialsearch" rel="noopener">Presidential Search – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/presidentialsearch</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/presidentialsearch.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/register-today-for-new-student-orientation" rel="noopener">Register Today for New Student Orientation – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/register-today-for-new-student-orientation</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/register-today-for-new-student-orientation.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/report-campus-violence" rel="noopener">Report Campus Violence – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/report-campus-violence</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/report-campus-violence.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/report-sexual-assault" rel="noopener">Report Sexual Assault – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/report-sexual-assault</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/report-sexual-assault.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/research" rel="noopener">Research – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/research</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/research.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/search_gcse" rel="noopener">Search Results – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/search_gcse</span></td>
+      <td class="n">0</td>
+      <td class="n">3</td>
+      <td class="links"><a class="pgrep" href="pages/search-gcse.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/shop" rel="noopener">Shop – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/shop</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/shop.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/shortcodes" rel="noopener">Shortcodes – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/shortcodes</span></td>
+      <td class="n bad">9</td>
+      <td class="n">36</td>
+      <td class="links"><a class="pgrep" href="pages/shortcodes.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/shot-at-a-scholarship" rel="noopener">Shot At A Scholarship – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/shot-at-a-scholarship</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/shot-at-a-scholarship.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/spring2021" rel="noopener">Enroll Now for Spring 2021! – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/spring2021</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/spring2021.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/staff" rel="noopener">Staff – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/staff</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/staff.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-handbook" rel="noopener">Student Handbook – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-handbook</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-handbook.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-life" rel="noopener">Campus Life – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-life</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-life.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-life/campus-safety" rel="noopener">Campus Safety – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-life/campus-safety</span></td>
+      <td class="n">0</td>
+      <td class="n">33</td>
+      <td class="links"><a class="pgrep" href="pages/student-life-campus-safety.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-life/civic-engagement" rel="noopener">Civic Engagement – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-life/civic-engagement</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-life-civic-engagement.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-life/residence-living" rel="noopener">Residence Living – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-life/residence-living</span></td>
+      <td class="n">0</td>
+      <td class="n">14</td>
+      <td class="links"><a class="pgrep" href="pages/student-life-residence-living.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-life/student-clubs-and-organizations" rel="noopener">Student Clubs and Organizations – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-life/student-clubs-and-organizations</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-life-student-clubs-and-organizations.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-life/student-clubs-and-organizations/phi-theta-kappa" rel="noopener">Phi Theta Kappa – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-life/student-clubs-and-organizations/phi-theta-kappa</span></td>
+      <td class="n">0</td>
+      <td class="n">3</td>
+      <td class="links"><a class="pgrep" href="pages/student-life-student-clubs-and-organizations-phi-theta-kappa.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services" rel="noopener">Student Services – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services/accessibility-and-accommodations" rel="noopener">Accessibility and Accommodations – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/accessibility-and-accommodations</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-accessibility-and-accommodations.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/aspira" rel="noopener">ASPIRA – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/aspira</span></td>
+      <td class="n bad">4</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-aspira.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/aspira/aspira-programs" rel="noopener">ASPIRA Programs – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/aspira/aspira-programs</span></td>
+      <td class="n bad">22</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-aspira-aspira-programs.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/aspira/aspira-programs/community-fellows" rel="noopener">Community Fellows – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/aspira/aspira-programs/community-fellows</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-aspira-aspira-programs-community-fellows.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/aspira/aspira-programs/early-college-awareness" rel="noopener">Early College Awareness – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/aspira/aspira-programs/early-college-awareness</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-aspira-aspira-programs-early-college-awareness.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/aspira/aspira-programs/lcc-fellows" rel="noopener">LCC Fellows – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/aspira/aspira-programs/lcc-fellows</span></td>
+      <td class="n bad">3</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-aspira-aspira-programs-lcc-fellows.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/aspira/aspira-programs/summer-bridge" rel="noopener">Summer Bridge – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/aspira/aspira-programs/summer-bridge</span></td>
+      <td class="n bad">1</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-aspira-aspira-programs-summer-bridge.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/aspira/quote-and-question" rel="noopener">Quote and Question – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/aspira/quote-and-question</span></td>
+      <td class="n bad">5</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-aspira-quote-and-question.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/cosiasap" rel="noopener">COSI ASAP – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/cosiasap</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-cosiasap.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/cosiasap/2026-spring-semester-success-plan" rel="noopener">2026 Spring Semester Success Plan – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/cosiasap/2026-spring-semester-success-plan</span></td>
+      <td class="n bad">1</td>
+      <td class="n">3</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-cosiasap-2026-spring-semester-success-plan.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/cosiasap/cosi-asap-at-a-glance" rel="noopener">COSI ASAP at a Glance – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/cosiasap/cosi-asap-at-a-glance</span></td>
+      <td class="n bad">3</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-cosiasap-cosi-asap-at-a-glance.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/cosiasap/news-and-events" rel="noopener">News and Events – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/cosiasap/news-and-events</span></td>
+      <td class="n bad">3</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-cosiasap-news-and-events.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services/fitness-center" rel="noopener">Fitness Center – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/fitness-center</span></td>
+      <td class="n">0</td>
+      <td class="n">15</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-fitness-center.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services/fitness-center/silversneakers" rel="noopener">SilverSneakers – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/fitness-center/silversneakers</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-fitness-center-silversneakers.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services/forms" rel="noopener">Forms – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/forms</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-forms.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services/helpful-immigration-resources-in-colorado" rel="noopener">Helpful Immigration Resources in Colorado – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/helpful-immigration-resources-in-colorado</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-helpful-immigration-resources-in-colorado.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/library" rel="noopener">Library – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/library</span></td>
+      <td class="n bad">3</td>
+      <td class="n">25</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-library.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services/lopes-cares" rel="noopener">LopesCares – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/lopes-cares</span></td>
+      <td class="n">0</td>
+      <td class="n">18</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-lopes-cares.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services/lopes-cares/contact-lopescares" rel="noopener">Contact Lopes Cares – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/lopes-cares/contact-lopescares</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-lopes-cares-contact-lopescares.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/student-success-center" rel="noopener">Student Success Center – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/student-success-center</span></td>
+      <td class="n bad">4</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-student-success-center.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/student-success-center/resources" rel="noopener">Resources – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/student-success-center/resources</span></td>
+      <td class="n bad">4</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-student-success-center-resources.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/student-success-center/resources/financial-education-microcredential" rel="noopener">Financial Education Microcredential – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/student-success-center/resources/financial-education-microcredential</span></td>
+      <td class="n bad">4</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-student-success-center-resources-financial-education-microcredential.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/student-success-center/student-ambassadors" rel="noopener">Student Ambassadors – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/student-success-center/student-ambassadors</span></td>
+      <td class="n bad">9</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-student-success-center-student-ambassadors.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/student-success-center/success-coaching" rel="noopener">Success Coaching – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/student-success-center/success-coaching</span></td>
+      <td class="n bad">4</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-student-success-center-success-coaching.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/student-success-center/success-coaching/meet-the-success-coaches" rel="noopener">Meet the Success Coaches – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/student-success-center/success-coaching/meet-the-success-coaches</span></td>
+      <td class="n bad">24</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-student-success-center-success-coaching-meet-the-success-coaches.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/student-services/technology-services" rel="noopener">Technology Services – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/technology-services</span></td>
+      <td class="n bad">3</td>
+      <td class="n">11</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-technology-services.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/student-services/tutoring-services" rel="noopener">Tutoring Services – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/student-services/tutoring-services</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/student-services-tutoring-services.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/students-community" rel="noopener">Students’ Community – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/students-community</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/students-community.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/taxonomy-template" rel="noopener">Taxonomy template – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/taxonomy-template</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/taxonomy-template.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/test" rel="noopener">Lamar Community College Announces Academic Honor Lists – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/test</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/test.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/test-banner" rel="noopener">Summer 2020 Schedule now available! – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/test-banner</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/test-banner.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/test-page" rel="noopener">Test Page – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/test-page</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/test-page.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/test-schedule-visit" rel="noopener">Test – Schedule visit – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/test-schedule-visit</span></td>
+      <td class="n bad">7</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/test-schedule-visit.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/tester" rel="noopener">Tester – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/tester</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/tester.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/testimonials" rel="noopener">Testimonials – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/testimonials</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/testimonials.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/three-for-two" rel="noopener">Three for Two – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/three-for-two</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/three-for-two.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/title-ix-sexual-harassment" rel="noopener">Title IX: Nondiscrimination – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/title-ix-sexual-harassment</span></td>
+      <td class="n">0</td>
+      <td class="n">3</td>
+      <td class="links"><a class="pgrep" href="pages/title-ix-sexual-harassment.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/unsubscribe" rel="noopener">Unsubscribe – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/unsubscribe</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/unsubscribe.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/venue-template" rel="noopener">Venue template – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/venue-template</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/venue-template.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/video" rel="noopener">Video – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/video</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/video.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/video-test" rel="noopener">Video Test – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/video-test</span></td>
+      <td class="n">0</td>
+      <td class="n">4</td>
+      <td class="links"><a class="pgrep" href="pages/video-test.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/welding-for-farmers-ranchers" rel="noopener">Welding for Farmers &amp; Ranchers – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/welding-for-farmers-ranchers</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/welding-for-farmers-ranchers.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/workforce-community" rel="noopener">Workforce &amp; Community – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/workforce-community</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/workforce-community.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/workforce-community/career-fair-2025" rel="noopener">Career Fair 2025 – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/workforce-community/career-fair-2025</span></td>
+      <td class="n bad">2</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/workforce-community-career-fair-2025.html">Audit report</a></td>
+    </tr>
+    <tr class="bad">
+      <td class="pg"><a href="https://lamarcc.edu/workforce-community/ranch-seminar" rel="noopener">Ranch Seminar – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/workforce-community/ranch-seminar</span></td>
+      <td class="n bad">1</td>
+      <td class="n">4</td>
+      <td class="links"><a class="pgrep" href="pages/workforce-community-ranch-seminar.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/workforce-community/skill-advance-grant" rel="noopener">Skill Advance Grant – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/workforce-community/skill-advance-grant</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/workforce-community-skill-advance-grant.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/workforce-community/workforce-resilience-program" rel="noopener">Workforce Resilience Program – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/workforce-community/workforce-resilience-program</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/workforce-community-workforce-resilience-program.html">Audit report</a></td>
+    </tr>
+    <tr>
+      <td class="pg"><a href="https://lamarcc.edu/youbelong" rel="noopener">You belong at Lamar Community College – Lamar CC</a> <span class="pwurl">https://lamarcc.edu/youbelong</span></td>
+      <td class="n">0</td>
+      <td class="n">2</td>
+      <td class="links"><a class="pgrep" href="pages/youbelong.html">Audit report</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Data</h2>
+<div class="datamenu">
+  <a href="latest.json">latest.json</a>
+  <a href="history.json">history.json</a>
+  <a href="https://github.com/ThirstyHead/lcc-audit/blob/main/reports/axe-2026-08-25T06-47-47-138Z.json">Raw report (latest)</a>
+  <a href="https://github.com/ThirstyHead/lcc-audit/tree/main/reports">All raw reports</a>
+</div>
+
+<footer>
+  <p><strong>About this audit.</strong> Results are produced automatically by
+  <a href="https://github.com/dequelabs/axe-core">axe-core</a> (Deque) against the WCAG 2.1 A/AA rule set,
+  on a weekly schedule, by the open-source tooling in
+  <a href="https://github.com/ThirstyHead/audit-lamarcc.edu">ThirstyHead/audit-lamarcc.edu</a>.
+  Automated tooling detects only a subset of accessibility failures and does not replace
+  manual or assistive-technology testing. “Needs manual review” items are results axe
+  could not determine automatically.</p>
+  <p>Generated 2026-08-25T06:47:48.078Z · <a href="https://thirstyhead.com/lcc-audit/">thirstyhead.com/lcc-audit/</a></p>
+</footer>
+</body>
+</html>
