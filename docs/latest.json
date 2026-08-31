@@ -1,8 +1,8 @@
 {
-  "siteGenerated": "2026-08-26T21:16:11.417Z",
+  "siteGenerated": "2026-08-31T14:06:23.084Z",
   "sourceRepo": "https://github.com/ThirstyHead/audit-lamarcc.edu",
   "report": {
-    "generated": "2026-08-26T21:16:10.383Z",
+    "generated": "2026-08-31T14:06:21.739Z",
     "tags": [
       "wcag2a",
       "wcag2aa",
@@ -70,9 +70,23 @@
               ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-zTETae",
               ".ead-preview:nth-child(21) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-zTETae"
             ]
+          },
+          {
+            "id": "image-alt",
+            "impact": "critical",
+            "help": "Images must have alternative text",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
+            "wcag": [
+              "wcag2a",
+              "wcag111"
+            ],
+            "nodes": 1,
+            "firstTargets": [
+              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] img"
+            ]
           }
         ],
-        "violationTotal": 2,
+        "violationTotal": 3,
         "incomplete": [
           {
             "id": "aria-prohibited-attr",
@@ -328,10 +342,10 @@
             "nodes": 5,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-7-tab-2\"]",
-              "li[aria-controls=\"tabs-7-tab-3\"]",
-              "li[aria-controls=\"tabs-7-tab-4\"]",
-              "li[aria-controls=\"tabs-7-tab-5\"]"
+              "li[aria-controls=\"tabs-90-tab-2\"]",
+              "li[aria-controls=\"tabs-90-tab-3\"]",
+              "li[aria-controls=\"tabs-90-tab-4\"]",
+              "li[aria-controls=\"tabs-90-tab-5\"]"
             ]
           }
         ],
@@ -622,8 +636,8 @@
             "nodes": 8,
             "firstTargets": [
               "iframe[width=\"640\"] .bC127c",
-              "iframe[width=\"640\"] .nSCxEf[aria-label=\"Sunday, August 23\"][jslog=\"184671\"]",
-              "iframe[width=\"640\"] .nSCxEf[aria-label=\"Monday, August 24\"][jslog=\"184671\"]"
+              "iframe[width=\"640\"] .pCcXPe.nSCxEf[aria-label=\"Sunday, August 30\"]",
+              "iframe[width=\"640\"] .F262Ye.nSCxEf[aria-label=\"Monday, August 31, today\"]"
             ]
           },
           {
@@ -765,8 +779,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-2-tab-2\"]",
-              "li[aria-controls=\"tabs-2-tab-3\"]"
+              "li[aria-controls=\"tabs-86-tab-2\"]",
+              "li[aria-controls=\"tabs-86-tab-3\"]"
             ]
           }
         ],
@@ -938,7 +952,7 @@
             "nodes": 2,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-73-tab-2\"]"
+              "li[aria-controls=\"tabs-96-tab-2\"]"
             ]
           }
         ],
@@ -1003,9 +1017,9 @@
             "nodes": 4,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-60-tab-2\"]",
-              "li[aria-controls=\"tabs-60-tab-3\"]",
-              "li[aria-controls=\"tabs-60-tab-4\"]"
+              "li[aria-controls=\"tabs-13-tab-2\"]",
+              "li[aria-controls=\"tabs-13-tab-3\"]",
+              "li[aria-controls=\"tabs-13-tab-4\"]"
             ]
           }
         ],
@@ -1822,7 +1836,7 @@
             "nodes": 2,
             "firstTargets": [
               ".last",
-              "strong"
+              ".last > strong"
             ]
           }
         ]
@@ -2010,7 +2024,7 @@
             "nodes": 2,
             "firstTargets": [
               ".last",
-              "strong"
+              ".last > strong"
             ]
           }
         ]
@@ -2885,8 +2899,8 @@
             "nodes": 5,
             "firstTargets": [
               "a[aria-label=\"Show slide 1 of 5\"]",
+              "a[aria-label=\"Show slide 2 of 5\"]",
               ".flex-active",
-              "a[aria-label=\"Show slide 3 of 5\"]",
               "a[aria-label=\"Show slide 4 of 5\"]",
               "a[aria-label=\"Show slide 5 of 5\"]"
             ]
@@ -3129,8 +3143,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-39-tab-2\"]",
-              "li[aria-controls=\"tabs-39-tab-3\"]"
+              "li[aria-controls=\"tabs-6-tab-2\"]",
+              "li[aria-controls=\"tabs-6-tab-3\"]"
             ]
           }
         ],
@@ -3370,10 +3384,10 @@
             "nodes": 7,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-33-tab-2\"]",
-              "li[aria-controls=\"tabs-33-tab-3\"]",
-              "li[aria-controls=\"tabs-33-tab-4\"]",
-              "li[aria-controls=\"tabs-33-tab-5\"]"
+              "li[aria-controls=\"tabs-71-tab-2\"]",
+              "li[aria-controls=\"tabs-71-tab-3\"]",
+              "li[aria-controls=\"tabs-71-tab-4\"]",
+              "li[aria-controls=\"tabs-71-tab-5\"]"
             ]
           }
         ],
@@ -3607,8 +3621,8 @@
             "nodes": 13,
             "firstTargets": [
               "a[aria-label=\"Show slide 1 of 13\"]",
+              "a[aria-label=\"Show slide 2 of 13\"]",
               ".flex-active",
-              "a[aria-label=\"Show slide 3 of 13\"]",
               "a[aria-label=\"Show slide 4 of 13\"]",
               "a[aria-label=\"Show slide 5 of 13\"]"
             ]
@@ -5841,9 +5855,9 @@
             ],
             "nodes": 7,
             "firstTargets": [
-              "li[aria-controls=\"tabs-77-tab-1\"]",
-              "li[aria-controls=\"tabs-77-tab-2\"]",
-              "li[aria-controls=\"tabs-77-tab-3\"]",
+              "li[aria-controls=\"tabs-25-tab-1\"]",
+              "li[aria-controls=\"tabs-25-tab-2\"]",
+              "li[aria-controls=\"tabs-25-tab-3\"]",
               "li[aria-controls=\"tabs-tabber2-tab-1\"]",
               "li[aria-controls=\"tabs-tabber2-tab-2\"]"
             ]
@@ -6103,7 +6117,7 @@
             ],
             "nodes": 13,
             "firstTargets": [
-              ".slide-59718[data-date=\"2026-06-09 08:33:06\"][data-filename=\"Untitled-design-24.png\"]:nth-child(2) > .caption-wrap > .caption > div",
+              ".flex-active-slide > .caption-wrap > .caption > div",
               ".threecol-one:nth-child(19) > h4",
               "a[href$=\"lamarcc.erezlife.com/\"]"
             ]
@@ -6791,8 +6805,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-53-tab-2\"]",
-              "li[aria-controls=\"tabs-53-tab-3\"]"
+              "li[aria-controls=\"tabs-93-tab-2\"]",
+              "li[aria-controls=\"tabs-93-tab-3\"]"
             ]
           }
         ],
@@ -7136,8 +7150,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-94-tab-2\"]",
-              "li[aria-controls=\"tabs-94-tab-3\"]"
+              "li[aria-controls=\"tabs-7-tab-2\"]",
+              "li[aria-controls=\"tabs-7-tab-3\"]"
             ]
           }
         ],
