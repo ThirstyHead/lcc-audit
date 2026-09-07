@@ -1,8 +1,8 @@
 {
-  "siteGenerated": "2026-08-31T14:06:23.084Z",
+  "siteGenerated": "2026-09-07T13:07:10.795Z",
   "sourceRepo": "https://github.com/ThirstyHead/audit-lamarcc.edu",
   "report": {
-    "generated": "2026-08-31T14:06:21.739Z",
+    "generated": "2026-09-07T13:07:09.403Z",
     "tags": [
       "wcag2a",
       "wcag2aa",
@@ -70,23 +70,9 @@
               ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-zTETae",
               ".ead-preview:nth-child(21) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-zTETae"
             ]
-          },
-          {
-            "id": "image-alt",
-            "impact": "critical",
-            "help": "Images must have alternative text",
-            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
-            "wcag": [
-              "wcag2a",
-              "wcag111"
-            ],
-            "nodes": 1,
-            "firstTargets": [
-              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] img"
-            ]
           }
         ],
-        "violationTotal": 3,
+        "violationTotal": 2,
         "incomplete": [
           {
             "id": "aria-prohibited-attr",
@@ -342,10 +328,10 @@
             "nodes": 5,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-90-tab-2\"]",
-              "li[aria-controls=\"tabs-90-tab-3\"]",
-              "li[aria-controls=\"tabs-90-tab-4\"]",
-              "li[aria-controls=\"tabs-90-tab-5\"]"
+              "li[aria-controls=\"tabs-36-tab-2\"]",
+              "li[aria-controls=\"tabs-36-tab-3\"]",
+              "li[aria-controls=\"tabs-36-tab-4\"]",
+              "li[aria-controls=\"tabs-36-tab-5\"]"
             ]
           }
         ],
@@ -636,8 +622,8 @@
             "nodes": 8,
             "firstTargets": [
               "iframe[width=\"640\"] .bC127c",
-              "iframe[width=\"640\"] .pCcXPe.nSCxEf[aria-label=\"Sunday, August 30\"]",
-              "iframe[width=\"640\"] .F262Ye.nSCxEf[aria-label=\"Monday, August 31, today\"]"
+              "iframe[width=\"640\"] .pCcXPe.nSCxEf[aria-label=\"Sunday, September 6\"]",
+              "iframe[width=\"640\"] .F262Ye.nSCxEf[aria-label=\"Monday, September 7, today\"]"
             ]
           },
           {
@@ -779,8 +765,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-86-tab-2\"]",
-              "li[aria-controls=\"tabs-86-tab-3\"]"
+              "li[aria-controls=\"tabs-92-tab-2\"]",
+              "li[aria-controls=\"tabs-92-tab-3\"]"
             ]
           }
         ],
@@ -952,7 +938,7 @@
             "nodes": 2,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-96-tab-2\"]"
+              "li[aria-controls=\"tabs-1-tab-2\"]"
             ]
           }
         ],
@@ -1017,9 +1003,9 @@
             "nodes": 4,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-13-tab-2\"]",
-              "li[aria-controls=\"tabs-13-tab-3\"]",
-              "li[aria-controls=\"tabs-13-tab-4\"]"
+              "li[aria-controls=\"tabs-1-tab-2\"]",
+              "li[aria-controls=\"tabs-1-tab-3\"]",
+              "li[aria-controls=\"tabs-1-tab-4\"]"
             ]
           }
         ],
@@ -1081,7 +1067,7 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 11,
+            "nodes": 9,
             "firstTargets": [
               ".fc-button-rhc_search",
               ".fc-button-today",
@@ -1091,7 +1077,7 @@
             ]
           }
         ],
-        "violationTotal": 11,
+        "violationTotal": 9,
         "incomplete": [
           {
             "id": "color-contrast",
@@ -1101,11 +1087,11 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 5,
+            "nodes": 8,
             "firstTargets": [
-              "td[data-date=\"2026-09-01\"] > div > .fc-day-number",
-              "td[data-date=\"2026-09-02\"] > div > .fc-day-number",
-              "td[data-date=\"2026-09-03\"] > div > .fc-day-number"
+              "td[data-date=\"2026-10-01\"] > div > .fc-day-number",
+              "td[data-date=\"2026-10-04\"] > div > .fc-day-number",
+              "td[data-date=\"2026-10-05\"] > div > .fc-day-number"
             ]
           },
           {
@@ -2899,8 +2885,8 @@
             "nodes": 5,
             "firstTargets": [
               "a[aria-label=\"Show slide 1 of 5\"]",
-              "a[aria-label=\"Show slide 2 of 5\"]",
               ".flex-active",
+              "a[aria-label=\"Show slide 3 of 5\"]",
               "a[aria-label=\"Show slide 4 of 5\"]",
               "a[aria-label=\"Show slide 5 of 5\"]"
             ]
@@ -3143,8 +3129,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-6-tab-2\"]",
-              "li[aria-controls=\"tabs-6-tab-3\"]"
+              "li[aria-controls=\"tabs-97-tab-2\"]",
+              "li[aria-controls=\"tabs-97-tab-3\"]"
             ]
           }
         ],
@@ -3384,10 +3370,10 @@
             "nodes": 7,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-71-tab-2\"]",
-              "li[aria-controls=\"tabs-71-tab-3\"]",
-              "li[aria-controls=\"tabs-71-tab-4\"]",
-              "li[aria-controls=\"tabs-71-tab-5\"]"
+              "li[aria-controls=\"tabs-70-tab-2\"]",
+              "li[aria-controls=\"tabs-70-tab-3\"]",
+              "li[aria-controls=\"tabs-70-tab-4\"]",
+              "li[aria-controls=\"tabs-70-tab-5\"]"
             ]
           }
         ],
@@ -3766,7 +3752,7 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 12,
+            "nodes": 11,
             "firstTargets": [
               ".fc-button-rhc_search",
               ".fc-button-today",
@@ -3776,7 +3762,7 @@
             ]
           }
         ],
-        "violationTotal": 12,
+        "violationTotal": 11,
         "incomplete": [
           {
             "id": "color-contrast",
@@ -3786,11 +3772,11 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 7,
+            "nodes": 11,
             "firstTargets": [
-              "td[data-date=\"2026-09-01\"] > div > .fc-day-number",
-              "td[data-date=\"2026-09-02\"] > div > .fc-day-number",
-              "td[data-date=\"2026-09-03\"] > div > .fc-day-number"
+              "td[data-date=\"2026-10-01\"] > div > .fc-day-number",
+              "td[data-date=\"2026-10-02\"] > div > .fc-day-number",
+              "td[data-date=\"2026-10-03\"] > div > .fc-day-number"
             ]
           },
           {
@@ -5855,9 +5841,9 @@
             ],
             "nodes": 7,
             "firstTargets": [
-              "li[aria-controls=\"tabs-25-tab-1\"]",
-              "li[aria-controls=\"tabs-25-tab-2\"]",
-              "li[aria-controls=\"tabs-25-tab-3\"]",
+              "li[aria-controls=\"tabs-13-tab-1\"]",
+              "li[aria-controls=\"tabs-13-tab-2\"]",
+              "li[aria-controls=\"tabs-13-tab-3\"]",
               "li[aria-controls=\"tabs-tabber2-tab-1\"]",
               "li[aria-controls=\"tabs-tabber2-tab-2\"]"
             ]
@@ -6164,11 +6150,11 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 3,
+            "nodes": 4,
             "firstTargets": [
               ".slide-59831[data-date=\"2026-06-24 14:40:02\"][data-thumb-alt=\"\"] > .caption-wrap > .caption > div",
-              ".last",
-              ".last > strong"
+              ".flex-active-slide > .caption-wrap > .caption > div",
+              ".last"
             ]
           }
         ]
@@ -6805,8 +6791,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-93-tab-2\"]",
-              "li[aria-controls=\"tabs-93-tab-3\"]"
+              "li[aria-controls=\"tabs-24-tab-2\"]",
+              "li[aria-controls=\"tabs-24-tab-3\"]"
             ]
           }
         ],
@@ -7150,8 +7136,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-7-tab-2\"]",
-              "li[aria-controls=\"tabs-7-tab-3\"]"
+              "li[aria-controls=\"tabs-20-tab-2\"]",
+              "li[aria-controls=\"tabs-20-tab-3\"]"
             ]
           }
         ],
