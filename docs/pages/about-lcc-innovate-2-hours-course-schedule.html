@@ -118,17 +118,17 @@
                 <tbody>
                     <tr>
                         <th scope="row"><a href="#1" class="card-link">1</a></th>
-                        <td>Elements must meet minimum color contrast ratio thresholds</td>
-                        <td>color-contrast</td>
-                        <td>WCAG 2 Level AA, WCAG 1.4.3</td>
+                        <td>Frames must have an accessible name</td>
+                        <td>frame-title</td>
+                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
                         <td>serious</td>
                         <td>1</td>
                     </tr>
                     <tr>
                         <th scope="row"><a href="#2" class="card-link">2</a></th>
-                        <td>Frames must have an accessible name</td>
-                        <td>frame-title</td>
-                        <td>WCAG 2 Level A, WCAG 4.1.2</td>
+                        <td>Scrollable region must have keyboard access</td>
+                        <td>scrollable-region-focusable</td>
+                        <td>WCAG 2 Level A, WCAG 2.1.1, WCAG 2.1.3</td>
                         <td>serious</td>
                         <td>1</td>
                     </tr>
@@ -139,94 +139,7 @@
                 <div class="card-body">
                     <div class="violationCardLine">
                         <p class="card-title">
-                            <a id="1">1.</a> Elements must meet minimum color contrast ratio thresholds
-                        </p>
-                        <a
-                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.13&#x2F;color-contrast?application&#x3D;playwright"
-                            target="_blank"
-                            class="card-link violationCardTitleItem learnMore"
-                            >Learn more</a
-                        >
-                    </div>
-                    <div class="violationCardLine">
-                        <p class="card-subtitle mb-2 text-muted">color-contrast</p>
-                        <p class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            WCAG 2 Level AA, WCAG 1.4.3
-                        </p>
-                    </div>
-                    <div class="violationCardLine">
-                        <p class="card-text">Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</p>
-                        <p class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            serious
-                        </p>
-                    </div>
-                    <div class="violationCardLine">
-                        <p class="card-subtitle mb-2 text-muted violationCardTitleItem">
-                            Issue Tags: 
-                            <span class="badge bg-light text-dark"> cat.color </span>
-
-                            <span class="badge bg-light text-dark"> wcag2aa </span>
-
-                            <span class="badge bg-light text-dark"> wcag143 </span>
-
-                            <span class="badge bg-light text-dark"> TTv5 </span>
-
-                            <span class="badge bg-light text-dark"> TT13.c </span>
-
-                            <span class="badge bg-light text-dark"> EN-301-549 </span>
-
-                            <span class="badge bg-light text-dark"> EN-9.1.4.3 </span>
-
-                            <span class="badge bg-light text-dark"> ACT </span>
-
-                            <span class="badge bg-light text-dark"> RGAAv4 </span>
-
-                            <span class="badge bg-light text-dark"> RGAA-3.2.1 </span>
-                        </p>
-                    </div>
-                    <div class="violationNode">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr>
-                                    <th style="width: 2%">#</th>
-                                    <th style="width: 49%">Issue Description</th>
-                                    <th style="width: 49%">
-                                        To solve this violation, you need to...
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <p><strong>Element location</strong></p>
-                                        <pre><code class="css text-wrap">iframe[width&#x3D;&quot;640&quot;]
-.I0UMhf</code></pre>
-                                        <p><strong>Element source</strong></p>
-                                        <pre><code class="html text-wrap">&lt;span class&#x3D;&quot;I0UMhf&quot;&gt;Arts and Crafts&lt;&#x2F;span&gt;</code></pre>
-                                    </td>
-                                    <td>
-                                        <div class="wrapBreakWord">
-                                            <p>Fix any of the following:</p>
-                                            <ul class="text-muted">
-                                                <li>  Element has insufficient color contrast of 3.45 (foreground color: #ffffff, background color: #7986cb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1</li>
-                                            </ul>
-                                        </div>
-                                        <p><strong>Related node:</strong></p>
-                                        <pre><code class="css text-wrap">iframe[width&#x3D;&quot;640&quot;]
-.GTG3wb</code></pre>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="card violationCard">
-                <div class="card-body">
-                    <div class="violationCardLine">
-                        <p class="card-title">
-                            <a id="2">2.</a> Frames must have an accessible name
+                            <a id="1">1.</a> Frames must have an accessible name
                         </p>
                         <a
                             href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.13&#x2F;frame-title?application&#x3D;playwright"
@@ -310,6 +223,93 @@
                     </div>
                 </div>
             </div>
+            <div class="card violationCard">
+                <div class="card-body">
+                    <div class="violationCardLine">
+                        <p class="card-title">
+                            <a id="2">2.</a> Scrollable region must have keyboard access
+                        </p>
+                        <a
+                            href="https:&#x2F;&#x2F;dequeuniversity.com&#x2F;rules&#x2F;axe&#x2F;4.13&#x2F;scrollable-region-focusable?application&#x3D;playwright"
+                            target="_blank"
+                            class="card-link violationCardTitleItem learnMore"
+                            >Learn more</a
+                        >
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-subtitle mb-2 text-muted">scrollable-region-focusable</p>
+                        <p class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            WCAG 2 Level A, WCAG 2.1.1, WCAG 2.1.3
+                        </p>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-text">Ensure elements that have scrollable content are accessible by keyboard in Safari</p>
+                        <p class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            serious
+                        </p>
+                    </div>
+                    <div class="violationCardLine">
+                        <p class="card-subtitle mb-2 text-muted violationCardTitleItem">
+                            Issue Tags: 
+                            <span class="badge bg-light text-dark"> cat.keyboard </span>
+
+                            <span class="badge bg-light text-dark"> wcag2a </span>
+
+                            <span class="badge bg-light text-dark"> wcag211 </span>
+
+                            <span class="badge bg-light text-dark"> wcag213 </span>
+
+                            <span class="badge bg-light text-dark"> TTv5 </span>
+
+                            <span class="badge bg-light text-dark"> TT4.a </span>
+
+                            <span class="badge bg-light text-dark"> EN-301-549 </span>
+
+                            <span class="badge bg-light text-dark"> EN-9.2.1.1 </span>
+
+                            <span class="badge bg-light text-dark"> EN-9.2.1.3 </span>
+
+                            <span class="badge bg-light text-dark"> RGAAv4 </span>
+
+                            <span class="badge bg-light text-dark"> RGAA-7.3.2 </span>
+                        </p>
+                    </div>
+                    <div class="violationNode">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 2%">#</th>
+                                    <th style="width: 49%">Issue Description</th>
+                                    <th style="width: 49%">
+                                        To solve this violation, you need to...
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <p><strong>Element location</strong></p>
+                                        <pre><code class="css text-wrap">iframe[width&#x3D;&quot;640&quot;]
+.mDPmMe</code></pre>
+                                        <p><strong>Element source</strong></p>
+                                        <pre><code class="html text-wrap">&lt;div class&#x3D;&quot;mDPmMe&quot; jsname&#x3D;&quot;QbbJ2c&quot;&gt;</code></pre>
+                                    </td>
+                                    <td>
+                                        <div class="wrapBreakWord">
+                                            <p>Fix any of the following:</p>
+                                            <ul class="text-muted">
+                                                <li>  Element should have focusable content</li>
+                                                <li>  Element should be focusable</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
             <div id="accordionPasses">
                 <div class="card">
                     <div class="card-header" id="headingOne">
@@ -321,7 +321,7 @@
                                 aria-expanded="false"
                                 aria-controls="passes"
                             >
-                                axe returned 32 passed axe
+                                axe returned 31 passed axe
                                 checks. Expand details on
                                 click
                             </button>
@@ -357,7 +357,7 @@
                                         <td>ARIA commands must have an accessible name</td>
                                         <td>aria-command-name</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                        <td>10</td>
+                                        <td>9</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -371,7 +371,7 @@
                                         <td>Deprecated ARIA roles must not be used</td>
                                         <td>aria-deprecated-role</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                        <td>42</td>
+                                        <td>41</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">5</th>
@@ -385,7 +385,7 @@
                                         <td>ARIA hidden element must not be focusable or contain focusable elements</td>
                                         <td>aria-hidden-focus</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                        <td>49</td>
+                                        <td>48</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">7</th>
@@ -399,7 +399,7 @@
                                         <td>Required ARIA attributes must be provided</td>
                                         <td>aria-required-attr</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                        <td>42</td>
+                                        <td>41</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">9</th>
@@ -420,7 +420,7 @@
                                         <td>ARIA roles used must conform to valid values</td>
                                         <td>aria-roles</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                        <td>42</td>
+                                        <td>41</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">12</th>
@@ -441,7 +441,7 @@
                                         <td>Inline text spacing must be adjustable with custom stylesheets</td>
                                         <td>avoid-inline-spacing</td>
                                         <td>WCAG 2.1 Level AA, WCAG 1.4.1.2</td>
-                                        <td>9</td>
+                                        <td>8</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">15</th>
@@ -462,7 +462,7 @@
                                         <td>Elements must meet minimum color contrast ratio thresholds</td>
                                         <td>color-contrast</td>
                                         <td>WCAG 2 Level AA, WCAG 1.4.3</td>
-                                        <td>73</td>
+                                        <td>72</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">18</th>
@@ -553,20 +553,13 @@
                                         <td>Interactive controls must not be nested</td>
                                         <td>nested-interactive</td>
                                         <td>WCAG 2 Level A, WCAG 4.1.2</td>
-                                        <td>33</td>
+                                        <td>32</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">31</th>
                                         <td>&lt;object&gt; elements must have alternative text</td>
                                         <td>object-alt</td>
                                         <td>WCAG 2 Level A, WCAG 1.1.1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">32</th>
-                                        <td>Scrollable region must have keyboard access</td>
-                                        <td>scrollable-region-focusable</td>
-                                        <td>WCAG 2 Level A, WCAG 2.1.1, WCAG 2.1.3</td>
                                         <td>1</td>
                                     </tr>
                                 </tbody>

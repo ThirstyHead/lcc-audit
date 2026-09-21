@@ -1,8 +1,8 @@
 {
-  "siteGenerated": "2026-09-14T12:46:40.304Z",
+  "siteGenerated": "2026-09-21T12:58:32.016Z",
   "sourceRepo": "https://github.com/ThirstyHead/audit-lamarcc.edu",
   "report": {
-    "generated": "2026-09-14T12:46:39.105Z",
+    "generated": "2026-09-21T12:58:30.630Z",
     "tags": [
       "wcag2a",
       "wcag2aa",
@@ -55,40 +55,9 @@
         "title": "About LCC – Lamar CC",
         "finalUrl": "https://lamarcc.edu/about-lcc/",
         "slug": "about-lcc",
-        "violations": [
-          {
-            "id": "aria-prohibited-attr",
-            "impact": "serious",
-            "help": "Elements must only use permitted ARIA attributes",
-            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
-            "wcag": [
-              "wcag2a",
-              "wcag412"
-            ],
-            "nodes": 2,
-            "firstTargets": [
-              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-zTETae",
-              ".ead-preview:nth-child(21) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-zTETae"
-            ]
-          }
-        ],
-        "violationTotal": 2,
+        "violations": [],
+        "violationTotal": 0,
         "incomplete": [
-          {
-            "id": "aria-prohibited-attr",
-            "impact": "serious",
-            "help": "Elements must only use permitted ARIA attributes",
-            "wcag": [
-              "wcag2a",
-              "wcag412"
-            ],
-            "nodes": 3,
-            "firstTargets": [
-              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc",
-              ".ead-preview:nth-child(21) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc",
-              ".ead-preview:nth-child(21) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-DARUcf-NnAfwf-i5oIFb"
-            ]
-          },
           {
             "id": "color-contrast",
             "impact": "serious",
@@ -97,10 +66,11 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 2,
+            "nodes": 10,
             "firstTargets": [
-              ".last",
-              ".last > strong"
+              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-document-loading > .ead-loading-wrap > .ead-loading-main > .ead-loading > span",
+              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-document-loading > .ead-loading-wrap > .ead-loading-foot > .ead-loading-foot-title > span",
+              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-document-loading > .ead-loading-wrap > .ead-loading-foot > .ead-reload-btn.ead-document-btn[role=\"button\"]"
             ]
           },
           {
@@ -328,10 +298,10 @@
             "nodes": 5,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-22-tab-2\"]",
-              "li[aria-controls=\"tabs-22-tab-3\"]",
-              "li[aria-controls=\"tabs-22-tab-4\"]",
-              "li[aria-controls=\"tabs-22-tab-5\"]"
+              "li[aria-controls=\"tabs-97-tab-2\"]",
+              "li[aria-controls=\"tabs-97-tab-3\"]",
+              "li[aria-controls=\"tabs-97-tab-4\"]",
+              "li[aria-controls=\"tabs-97-tab-5\"]"
             ]
           }
         ],
@@ -580,20 +550,6 @@
         "slug": "about-lcc-innovate-2-hours-course-schedule",
         "violations": [
           {
-            "id": "color-contrast",
-            "impact": "serious",
-            "help": "Elements must meet minimum color contrast ratio thresholds",
-            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
-            "wcag": [
-              "wcag2aa",
-              "wcag143"
-            ],
-            "nodes": 1,
-            "firstTargets": [
-              "iframe[width=\"640\"] .I0UMhf"
-            ]
-          },
-          {
             "id": "frame-title",
             "impact": "serious",
             "help": "Frames must have an accessible name",
@@ -605,6 +561,21 @@
             "nodes": 1,
             "firstTargets": [
               "iframe[width=\"640\"]"
+            ]
+          },
+          {
+            "id": "scrollable-region-focusable",
+            "impact": "serious",
+            "help": "Scrollable region must have keyboard access",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/scrollable-region-focusable?application=playwright",
+            "wcag": [
+              "wcag2a",
+              "wcag211",
+              "wcag213"
+            ],
+            "nodes": 1,
+            "firstTargets": [
+              "iframe[width=\"640\"] .mDPmMe"
             ]
           }
         ],
@@ -621,8 +592,8 @@
             "nodes": 8,
             "firstTargets": [
               "iframe[width=\"640\"] .bC127c",
-              "iframe[width=\"640\"] .pCcXPe.nSCxEf[aria-label=\"Sunday, September 13\"]",
-              "iframe[width=\"640\"] .F262Ye.nSCxEf[aria-label=\"Monday, September 14, today\"]"
+              "iframe[width=\"640\"] .pCcXPe.nSCxEf[aria-label=\"Sunday, September 20\"]",
+              "iframe[width=\"640\"] .F262Ye.nSCxEf[aria-label=\"Monday, September 21, today\"]"
             ]
           },
           {
@@ -764,8 +735,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-92-tab-2\"]",
-              "li[aria-controls=\"tabs-92-tab-3\"]"
+              "li[aria-controls=\"tabs-50-tab-2\"]",
+              "li[aria-controls=\"tabs-50-tab-3\"]"
             ]
           }
         ],
@@ -937,7 +908,7 @@
             "nodes": 2,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-24-tab-2\"]"
+              "li[aria-controls=\"tabs-62-tab-2\"]"
             ]
           }
         ],
@@ -1002,9 +973,9 @@
             "nodes": 4,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-26-tab-2\"]",
-              "li[aria-controls=\"tabs-26-tab-3\"]",
-              "li[aria-controls=\"tabs-26-tab-4\"]"
+              "li[aria-controls=\"tabs-31-tab-2\"]",
+              "li[aria-controls=\"tabs-31-tab-3\"]",
+              "li[aria-controls=\"tabs-31-tab-4\"]"
             ]
           }
         ],
@@ -3128,8 +3099,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-97-tab-2\"]",
-              "li[aria-controls=\"tabs-97-tab-3\"]"
+              "li[aria-controls=\"tabs-32-tab-2\"]",
+              "li[aria-controls=\"tabs-32-tab-3\"]"
             ]
           }
         ],
@@ -3369,10 +3340,10 @@
             "nodes": 7,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-86-tab-2\"]",
-              "li[aria-controls=\"tabs-86-tab-3\"]",
-              "li[aria-controls=\"tabs-86-tab-4\"]",
-              "li[aria-controls=\"tabs-86-tab-5\"]"
+              "li[aria-controls=\"tabs-65-tab-2\"]",
+              "li[aria-controls=\"tabs-65-tab-3\"]",
+              "li[aria-controls=\"tabs-65-tab-4\"]",
+              "li[aria-controls=\"tabs-65-tab-5\"]"
             ]
           }
         ],
@@ -5858,9 +5829,9 @@
             ],
             "nodes": 7,
             "firstTargets": [
-              "li[aria-controls=\"tabs-67-tab-1\"]",
-              "li[aria-controls=\"tabs-67-tab-2\"]",
-              "li[aria-controls=\"tabs-67-tab-3\"]",
+              "li[aria-controls=\"tabs-58-tab-1\"]",
+              "li[aria-controls=\"tabs-58-tab-2\"]",
+              "li[aria-controls=\"tabs-58-tab-3\"]",
               "li[aria-controls=\"tabs-tabber2-tab-1\"]",
               "li[aria-controls=\"tabs-tabber2-tab-2\"]"
             ]
@@ -6169,7 +6140,7 @@
             ],
             "nodes": 3,
             "firstTargets": [
-              ".slide-59831[data-date=\"2026-06-24 14:40:02\"][data-thumb-alt=\"\"] > .caption-wrap > .caption > div",
+              ".flex-active-slide > .caption-wrap > .caption > div",
               ".last",
               ".last > strong"
             ]
@@ -6808,8 +6779,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-21-tab-2\"]",
-              "li[aria-controls=\"tabs-21-tab-3\"]"
+              "li[aria-controls=\"tabs-6-tab-2\"]",
+              "li[aria-controls=\"tabs-6-tab-3\"]"
             ]
           }
         ],
@@ -7153,8 +7124,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-22-tab-2\"]",
-              "li[aria-controls=\"tabs-22-tab-3\"]"
+              "li[aria-controls=\"tabs-88-tab-2\"]",
+              "li[aria-controls=\"tabs-88-tab-3\"]"
             ]
           }
         ],
