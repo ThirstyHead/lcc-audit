@@ -1,8 +1,8 @@
 {
-  "siteGenerated": "2026-09-21T12:58:32.016Z",
+  "siteGenerated": "2026-09-28T13:54:37.891Z",
   "sourceRepo": "https://github.com/ThirstyHead/audit-lamarcc.edu",
   "report": {
-    "generated": "2026-09-21T12:58:30.630Z",
+    "generated": "2026-09-28T13:54:36.412Z",
     "tags": [
       "wcag2a",
       "wcag2aa",
@@ -55,9 +55,40 @@
         "title": "About LCC – Lamar CC",
         "finalUrl": "https://lamarcc.edu/about-lcc/",
         "slug": "about-lcc",
-        "violations": [],
-        "violationTotal": 0,
+        "violations": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "help": "Elements must only use permitted ARIA attributes",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "nodes": 2,
+            "firstTargets": [
+              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-zTETae",
+              ".ead-preview:nth-child(21) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-zTETae"
+            ]
+          }
+        ],
+        "violationTotal": 2,
         "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "impact": "serious",
+            "help": "Elements must only use permitted ARIA attributes",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "nodes": 3,
+            "firstTargets": [
+              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc",
+              ".ead-preview:nth-child(21) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc",
+              ".ead-preview:nth-child(21) > .ead-document[data-viewer=\"browser\"] > .ead-iframe-wrapper > .ead-iframe[title=\"Embedded Document\"] .ndfHFb-c4YZDc-DARUcf-NnAfwf-i5oIFb"
+            ]
+          },
           {
             "id": "color-contrast",
             "impact": "serious",
@@ -66,11 +97,10 @@
               "wcag2aa",
               "wcag143"
             ],
-            "nodes": 10,
+            "nodes": 2,
             "firstTargets": [
-              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-document-loading > .ead-loading-wrap > .ead-loading-main > .ead-loading > span",
-              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-document-loading > .ead-loading-wrap > .ead-loading-foot > .ead-loading-foot-title > span",
-              ".ead-preview:nth-child(17) > .ead-document[data-viewer=\"browser\"] > .ead-document-loading > .ead-loading-wrap > .ead-loading-foot > .ead-reload-btn.ead-document-btn[role=\"button\"]"
+              ".last",
+              ".last > strong"
             ]
           },
           {
@@ -298,10 +328,10 @@
             "nodes": 5,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-97-tab-2\"]",
-              "li[aria-controls=\"tabs-97-tab-3\"]",
-              "li[aria-controls=\"tabs-97-tab-4\"]",
-              "li[aria-controls=\"tabs-97-tab-5\"]"
+              "li[aria-controls=\"tabs-57-tab-2\"]",
+              "li[aria-controls=\"tabs-57-tab-3\"]",
+              "li[aria-controls=\"tabs-57-tab-4\"]",
+              "li[aria-controls=\"tabs-57-tab-5\"]"
             ]
           }
         ],
@@ -592,8 +622,8 @@
             "nodes": 8,
             "firstTargets": [
               "iframe[width=\"640\"] .bC127c",
-              "iframe[width=\"640\"] .pCcXPe.nSCxEf[aria-label=\"Sunday, September 20\"]",
-              "iframe[width=\"640\"] .F262Ye.nSCxEf[aria-label=\"Monday, September 21, today\"]"
+              "iframe[width=\"640\"] .pCcXPe.nSCxEf[aria-label=\"Sunday, September 27\"]",
+              "iframe[width=\"640\"] .F262Ye.nSCxEf[aria-label=\"Monday, September 28, today\"]"
             ]
           },
           {
@@ -735,8 +765,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-50-tab-2\"]",
-              "li[aria-controls=\"tabs-50-tab-3\"]"
+              "li[aria-controls=\"tabs-5-tab-2\"]",
+              "li[aria-controls=\"tabs-5-tab-3\"]"
             ]
           }
         ],
@@ -908,7 +938,7 @@
             "nodes": 2,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-62-tab-2\"]"
+              "li[aria-controls=\"tabs-6-tab-2\"]"
             ]
           }
         ],
@@ -973,9 +1003,9 @@
             "nodes": 4,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-31-tab-2\"]",
-              "li[aria-controls=\"tabs-31-tab-3\"]",
-              "li[aria-controls=\"tabs-31-tab-4\"]"
+              "li[aria-controls=\"tabs-92-tab-2\"]",
+              "li[aria-controls=\"tabs-92-tab-3\"]",
+              "li[aria-controls=\"tabs-92-tab-4\"]"
             ]
           }
         ],
@@ -3099,8 +3129,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-32-tab-2\"]",
-              "li[aria-controls=\"tabs-32-tab-3\"]"
+              "li[aria-controls=\"tabs-60-tab-2\"]",
+              "li[aria-controls=\"tabs-60-tab-3\"]"
             ]
           }
         ],
@@ -3340,10 +3370,10 @@
             "nodes": 7,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-65-tab-2\"]",
-              "li[aria-controls=\"tabs-65-tab-3\"]",
-              "li[aria-controls=\"tabs-65-tab-4\"]",
-              "li[aria-controls=\"tabs-65-tab-5\"]"
+              "li[aria-controls=\"tabs-62-tab-2\"]",
+              "li[aria-controls=\"tabs-62-tab-3\"]",
+              "li[aria-controls=\"tabs-62-tab-4\"]",
+              "li[aria-controls=\"tabs-62-tab-5\"]"
             ]
           }
         ],
@@ -5829,9 +5859,9 @@
             ],
             "nodes": 7,
             "firstTargets": [
-              "li[aria-controls=\"tabs-58-tab-1\"]",
-              "li[aria-controls=\"tabs-58-tab-2\"]",
-              "li[aria-controls=\"tabs-58-tab-3\"]",
+              "li[aria-controls=\"tabs-24-tab-1\"]",
+              "li[aria-controls=\"tabs-24-tab-2\"]",
+              "li[aria-controls=\"tabs-24-tab-3\"]",
               "li[aria-controls=\"tabs-tabber2-tab-1\"]",
               "li[aria-controls=\"tabs-tabber2-tab-2\"]"
             ]
@@ -6140,7 +6170,7 @@
             ],
             "nodes": 3,
             "firstTargets": [
-              ".flex-active-slide > .caption-wrap > .caption > div",
+              ".slide-59831[data-date=\"2026-06-24 14:40:02\"][data-thumb-alt=\"\"] > .caption-wrap > .caption > div",
               ".last",
               ".last > strong"
             ]
@@ -6779,8 +6809,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-6-tab-2\"]",
-              "li[aria-controls=\"tabs-6-tab-3\"]"
+              "li[aria-controls=\"tabs-63-tab-2\"]",
+              "li[aria-controls=\"tabs-63-tab-3\"]"
             ]
           }
         ],
@@ -7124,8 +7154,8 @@
             "nodes": 3,
             "firstTargets": [
               ".ui-tabs-active",
-              "li[aria-controls=\"tabs-88-tab-2\"]",
-              "li[aria-controls=\"tabs-88-tab-3\"]"
+              "li[aria-controls=\"tabs-78-tab-2\"]",
+              "li[aria-controls=\"tabs-78-tab-3\"]"
             ]
           }
         ],
